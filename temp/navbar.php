@@ -31,12 +31,16 @@
         <link href="assets/css/components.min.css" rel="stylesheet" id="style_components" type="text/css" />
         <link href="assets/css/plugins.min.css" rel="stylesheet" type="text/css" />
         <!-- END THEME GLOBAL STYLES -->
+        <link href="assets/datatables/datatables.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/datatables/plugins/bootstrap/datatables.bootstrap.css" rel="stylesheet" type="text/css" />
         <!-- BEGIN THEME LAYOUT STYLES -->
         <link href="assets/css/layout.min.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/darkblue.min.css" rel="stylesheet" type="text/css" id="style_color" />
         <link href="assets/css/custom.min.css" rel="stylesheet" type="text/css" />
         <!-- END THEME LAYOUT STYLES -->
-        <link rel="shortcut icon" href="favicon.ico" /> </head>
+        <link rel="shortcut icon" href="favicon.ico" />
+
+         </head>
     <!-- END HEAD -->
 
     <body class="page-header-fixed page-sidebar-closed-hide-logo page-content-white">
@@ -135,19 +139,19 @@
                                 </a>
                                 <ul class="sub-menu">
                                     <li class="nav-item  ">
-                                        <a href="form_controls.html" class="nav-link ">
+                                        <a href="useradd.php" class="nav-link ">
                                             <span class="title"><i class="icon-user"></i> Add users</span>
                                         </a>
                                     </li>
                                     <li class="nav-item  ">
                                         
-                                        <a href="ui_colors.html" class="nav-link ">
+                                        <a href="userinfo.php" class="nav-link ">
                                             <span class="title"> <i class="icon-docs"></i> Users Informations</span>
                                         </a>
                                     </li>
                                     <li class="nav-item  ">
-                                        <a href="ui_metronic_grid.html" class="nav-link ">
-                                            <span class="title"><i class="icon-settings"></i> Users Accounts</span>
+                                        <a href="useraccnt.php" class="nav-link ">
+                                            <span class="title"><i class="icon-settings"></i> Manage Accounts</span>
                                         </a>
                                     </li>
                                    
@@ -161,12 +165,12 @@
                                 </a>
                                 <ul class="sub-menu">
                                     <li class="nav-item  ">
-                                        <a href="components_date_time_pickers.html" class="nav-link ">
+                                        <a href="branchadd.php" class="nav-link ">
                                             <span class="title"><i class="icon-plus"></i> Add Branch</span>
                                         </a>
                                     </li>
                                     <li class="nav-item  ">
-                                        <a href="components_color_pickers.html" class="nav-link ">
+                                        <a href="branchinfo.php" class="nav-link ">
                                             <span class="title"><i class="icon-docs"></i> Branch Information</span>
                                            
                                         </a>
@@ -182,12 +186,12 @@
                                 </a>
                                 <ul class="sub-menu">
                                     <li class="nav-item  ">
-                                        <a href="form_controls.html" class="nav-link ">
+                                        <a href="productadd.php" class="nav-link ">
                                             <span class="title"><i class="icon-plus"></i> Add products</span>
                                         </a>
                                     </li>
                                     <li class="nav-item  ">
-                                        <a href="form_controls_md.html" class="nav-link ">
+                                        <a href="productinfo.php" class="nav-link ">
                                             <span class="title"><i class="icon-docs"></i> Product information</span>
                                         </a>
                                     </li>
@@ -204,7 +208,7 @@
                                 <ul class="sub-menu">
                                     
                                     <li class="nav-item  ">
-                                        <a href="form_controls_md.html" class="nav-link ">
+                                        <a href="inventoryinfo.php" class="nav-link ">
                                             <span class="title"><i class="icon-docs"></i> Items information</span>
                                         </a>
                                     </li>
@@ -250,8 +254,62 @@
                            <div id='dashboard'>
                               <?php startblock('dashboard') ?>
                               <?php endblock() ?>
-                            </div>      
-                       
+                            </div> 
+                     <!-- Users Start -->
+                            <div id='useradd'>
+                              <?php startblock('useradd') ?>
+                              <?php endblock() ?>
+                            </div>    
+
+                            <div id='userinfo'>
+                              <?php startblock('userinfo') ?>
+                              <?php endblock() ?>
+                            </div> 
+
+                            <div id='useraccnt'>
+                              <?php startblock('useraccnt') ?>
+                              <?php endblock() ?>
+                            </div>   
+                       <!-- Users End -->
+
+                       <!-- Branch Start -->
+
+                       <div id='branchadd'>
+                              <?php startblock('branchadd') ?>
+                              <?php endblock() ?>
+                       </div> 
+
+                          <div id='branchinfo'>
+                              <?php startblock('branchinfo') ?>
+                              <?php endblock() ?>
+                         </div>  
+ 
+                       <!-- Branch End -->
+
+                       <!-- Products Start -->
+                         
+                         <div id='productadd'>
+                              <?php startblock('productadd') ?>
+                              <?php endblock() ?>
+                         </div> 
+                        
+                        <div id='productinfo'>
+                              <?php startblock('productinfo') ?>
+                              <?php endblock() ?>
+                         </div> 
+                        
+
+                       <!-- Products End -->
+
+                       <!-- Inventory Start -->
+
+                        <div id='inventoryinfo'>
+                              <?php startblock('inventoryinfo') ?>
+                              <?php endblock() ?>
+                         </div> 
+
+                       <!-- Inventory END -->
+
                     </div>
                     <!-- END CONTENT BODY -->
                 </div>
@@ -321,9 +379,25 @@
         <script src="assets/js/jquery.vmap.usa.js" type="text/javascript"></script>
         <script src="assets/js/jquery.vmap.sampledata.js" type="text/javascript"></script>
         <!-- END PAGE LEVEL PLUGINS -->
+        <!-- BEGIN PAGE LEVEL PLUGINS -->
+        <script src="assets/js/select2.full.min.js" type="text/javascript"></script>
+        <script src="assets/js/jquery.validate.min.js" type="text/javascript"></script>
+        <script src="assets/js/additional-methods.min.js" type="text/javascript"></script>
+        <script src="assets/js/jquery.bootstrap.wizard.min.js" type="text/javascript"></script>
+        <!-- END PAGE LEVEL PLUGINS -->
+        <!-- BEGIN PAGE LEVEL PLUGINS -->
+        <script src="assets/datatables/datatable.js" type="text/javascript"></script>
+        <script src="assets/datatables/datatables.min.js" type="text/javascript"></script>
+        <script src="assets/datatables/plugins/bootstrap/datatables.bootstrap.js" type="text/javascript"></script>
+         
+        <!-- END PAGE LEVEL PLUGINS -->
         <!-- BEGIN THEME GLOBAL SCRIPTS -->
         <script src="assets/js/app.min.js" type="text/javascript"></script>
         <!-- END THEME GLOBAL SCRIPTS -->
+        <script src="assets/datatables/table-datatables-managed.min.js" type="text/javascript"></script>
+           <!-- BEGIN USERS ADD FORM SCRIPTS -->
+         <script src="assets/js/form-wizard.min.js" type="text/javascript"></script>
+         <!-- END USERS ADD FORM SCRIPTS -->
         <!-- BEGIN PAGE LEVEL SCRIPTS -->
         <script src="assets/js/dashboard.min.js" type="text/javascript"></script>
         <!-- END PAGE LEVEL SCRIPTS -->
@@ -333,6 +407,7 @@
         <script src="assets/js/quick-sidebar.min.js" type="text/javascript"></script>
         <script src="assets/js/quick-nav.min.js" type="text/javascript"></script>
         <!-- END THEME LAYOUT SCRIPTS -->
+     
     </body>
 
 </html>
